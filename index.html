@@ -1,37 +1,189 @@
-<!doctype html>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
   <head>
-    <Jeanne Dionne>Ce qui va apparaître dans la tab de votre site</title>
+    <title>Jeanne Dionne</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <style>
+      /* Import des nouvelles polices */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;600&display=swap');
+
+      /* Nouvelles polices */
+      body, p, li {
+        font-family: 'Roboto', sans-serif !important;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif !important;
+      }
+
+      /* Couleurs inspirées de Copenhague */
+      body, #wrapper, #main, .container {
+        background-color: #F0F6FA !important;
+        color: #2C3E50 !important;
+      }
+
+      #header {
+        background: #3D5A80 !important;
+      }
+
+      h1, h2, h3, h4, h5, h6, 
+      .major h2, .major h3,
+      #logo a {
+        color: #D4764A !important;
+        font-weight: 600 !important;
+      }
+
+      a {
+        color: #6BA3D4 !important;
+      }
+
+      a:hover {
+        color: #D4764A !important;
+      }
+
+      #nav ul li a {
+        color: #F4E8D8 !important;
+      }
+
+      #nav ul li a.active,
+      #nav ul li a:hover {
+        background: #E8B44F !important;
+        color: #2C3E50 !important;
+      }
+
+      .button, button {
+        background-color: #6BA3D4 !important;
+        color: white !important;
+        border-color: #6BA3D4 !important;
+        padding: 12px 30px !important;
+        font-size: 1.1em !important;
+        border-radius: 5px !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+      }
+
+      .button:hover, button:hover {
+        background-color: #D4764A !important;
+        border-color: #D4764A !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+      }
+
+      .icons li a {
+        color: #F4E8D8 !important;
+      }
+
+      .icons li a:hover {
+        color: #E8B44F !important;
+      }
+
+      #footer {
+        background: #3D5A80 !important;
+        color: #F4E8D8 !important;
+      }
+
+      .container {
+        padding: 40px 30px !important;
+      }
+
+      p {
+        line-height: 1.8 !important;
+        font-size: 1.05em !important;
+      }
+
+      h2, h3 {
+        margin-top: 30px !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* Animation des sections */
+      #one, #two, #three, #four {
+        background: white !important;
+        margin: 20px 0 !important;
+        padding: 40px !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 15px rgba(61, 90, 128, 0.1) !important;
+        border-left: 4px solid #6BA3D4 !important;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Overlay sur image principale */
+      .image.main {
+        position: relative;
+      }
+
+      .image.main::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+        pointer-events: none;
+      }
+
+      .realisation-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .realisation-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #E8B44F;
+      }
+
+      .realisation-list li:last-child {
+        border-bottom: none;
+      }
+
+      .realisation-list strong {
+        color: #D4764A;
+        font-size: 1.1em;
+      }
+
+      .realisation-list em {
+        color: #6BA3D4;
+      }
+
+      /* Style pour les emojis */
+      .emoji-icon {
+        color: #6BA3D4;
+        margin-right: 10px;
+        font-size: 1.2em;
+      }
+    </style>
   </head>
   <body class="is-preload">
-    <!-- Header -->
     <section id="header">
       <header>
-        <span class="image avatar"
-          ><img src="" alt=""
-        /></span>
+        <span <div style="text-align: center; margin: 20px 0;">
+  <img src="images/SAM_4853.jpeg" alt="" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; transition: transform 0.3s ease; margin: 0 auto; display: block; box-shadow: none !important; border: none !important;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" />
+</div></span>
         <h1 id="logo"><a href="#">Jeanne Dionne</a></h1>
-        <p>
-          Étudiante à la maîtrise professionnelle en science politique à l'Université Laval.<br />
-          Baccalauréat intégré en études internationales et langues modernes obtenu en 2025. Participation en tant que déléguée du Cambodge dans le comité ECOFIN lors de la 70e édition de
-HNMUN à Boston (2024)
-        </p>
+        <p>Bienvenue sur mon site !</p>
       </header>
       <nav id="nav">
         <ul>
           <li><a href="#one" class="active">À propos</a></li>
-          <li><a href="#two">Mon travail</a></li>
+          <li><a href="#two">Mes réalisations</a></li>
           <li><a href="#three">Mon CV</a></li>
           <li><a href="#four">Contact</a></li>
         </ul>
@@ -39,150 +191,109 @@ HNMUN à Boston (2024)
       <footer>
         <ul class="icons">
           <li>
-            <!-- Vous pouvez mettre en hyperlien vos reseaux sociaux en modifiant la valeur de href-->
-            <a href="https://x.com/MLB/" class="icon brands fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
+            <a href="https://www.linkedin.com/in/jeanne-dionne-2854b6352/" class="icon brands fa-linkedin">
+              <span class="label">LinkedIn</span>
+            </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/jeanne-dionne-2854b6352/" class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
+            <a href="https://github.com/jeadi14" class="icon brands fa-github">
+              <span class="label">Github</span>
+            </a>
           </li>
           <li>
-            <a href="https://github.com/jeadi14" class="icon brands fa-github"
-              ><span class="label">Github</span></a
-            >
-          </li>
-          <li>
-            <a href="mailto:jeanne.dionne14@gmail.com" class="icon solid fa-envelope"
-              ><span class="label">Email</span></a
-            >
+            <a href="mailto:jeanne.dionne14@gmail.com" class="icon solid fa-envelope">
+              <span class="label">Email</span>
+            </a>
           </li>
         </ul>
       </footer>
     </section>
 
-    <!-- Wrapper -->
     <div id="wrapper">
-      <!-- Main -->
       <div id="main">
-        <!-- One -->
         <section id="one">
-          <div class="image main" data-position="center">
-            <img src="images/bg.jpeg" alt="" />
+          <div class="image main" data-position="bottom center">
+            <img src="images/IMG_3316.jpeg" alt="" />
           </div>
           <div class="container">
             <header class="major">
               <h2>Jeanne Dionne</h2>
-              <p>Le sous-titre de votre site.</p>
+              <p>À propos de moi</p>
             </header>
             <p>
-              Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus
-              col. Commodo id in arcu ante lorem ipsum sed accumsan erat
-              praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo.
-              Vis aliquet tortor ultricies non ante erat nunc integer eu ante
-              ornare amet commetus vestibulum blandit integer in curae ac
-              faucibus integer non. Adipiscing cubilia elementum.
+              Je m'appelle Jeanne Dionne, étudiante en science politique passionnée par les relations internationales, les études culturelles et les enjeux identitaires. Originaire de Québec, j'ai enrichi mon parcours par une année d'échange aux Pays-Bas, où j'ai développé une perspective globale sur les dynamiques politiques européennes et internationales. Mon parcours académique et professionnel est orienté vers une compréhension approfondie des enjeux géopolitiques, avec l'ambition de contribuer activement aux débats sur le nationalisme, la langue, la culture et l'identité dans un monde en constante évolution.
             </p>
           </div>
         </section>
 
-        <!-- Two -->
         <section id="two">
           <div class="container">
             <h3>Mes réalisations</h3>
-            <p>
-              Certificat de reconnaissance de Harvard National Model United Nations
-Participation en tant que délégué du Cambodge dans le comité ECOFIN lors de la 70e édition de
-HNMUN à Boston (2024)
-Université Laval
-Baccalauréat intégré en études internationales et langues modernes obtenu en 2025
-				Échange universitaire à l'Université Leiden aux Pays-Bas en 2024-2025
-Maîtrise en Science Politique, politique québécoise et canadienne dès septembre 2025
-Cégep François-Xavier Garneau
-Diplôme d’étude collégial obtenu en 2022
-            </p>
+            <ul class="realisation-list">
+              <li>
+                <span class="emoji-icon">🎓</span>
+                <strong>Participation au Harvard National Model United Nations (HNMUN)</strong><br>
+                <em>Boston, États-Unis | 2023-2024</em>
+              </li>
+              <li>
+                <span class="emoji-icon">✈️</span>
+                <strong>Année d'échange internationale</strong><br>
+                <em>Leiden University, La Haye, Pays-Bas | 2024-2025</em>
+              </li>
+              <li>
+                <span class="emoji-icon">📚</span>
+                <strong>Baccalauréat intégré en études internationales et langues modernes (Profil international)</strong><br>
+                <em>Université Laval | 2025</em>
+              </li>
+            </ul>
+            
+            <h3 style="margin-top: 40px;">Mes champs d'intérêts</h3>
             <ul class="feature-icons">
-              <li class="icon solid fa-code">
-                Ici vous pouvez écrire ce que vous voulez
-              </li>
-              <li class="icon solid fa-cubes">
-                Le class= s'occupe des logos à côté de votre texte
-              </li>
-              <li class="icon solid fa-book">
-                Trouvez autant de choses à écrire que vous le voulez
-              </li>
-              <li class="icon solid fa-coffee">Supprimez le reste</li>
-              <li class="icon solid fa-bolt">Lightning bolt</li>
-              <li class="icon solid fa-users">Shadow clone technique</li>
+              <li class="icon solid fa-globe">Relations internationales et diplomatie</li>
+              <li class="icon solid fa-language">Langue, culture et identité</li>
+              <li class="icon solid fa-flag">Nationalisme et mouvements identitaires</li>
+              <li class="icon solid fa-landmark">Politique canadienne et internationale</li>
+              <li class="icon solid fa-book">Histoire</li>
             </ul>
           </div>
         </section>
 
-        <!-- Three -->
         <section id="three">
           <div class="container">
             <h3>Mon CV</h3>
             <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer in
-              curae ac faucibus integer non. Adipiscing cubilia elementum
-              integer. Integer eu ante ornare amet commetus.
+              Actuellement étudiante à la maîtrise en science politique à l'Université Laval, je m'intéresse particulièrement aux questions de nationalisme, d'identité culturelle et de relations internationales. Mon baccalauréat intégré en études internationales et langues modernes, complété par une année d'échange à Leiden University aux Pays-Bas, m'a permis d'acquérir une perspective comparative unique sur les enjeux politiques contemporains.
             </p>
-            <div class="features">
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/pic01.jpg" alt=""
-                /></a>
-                <div class="inner">
-                  <h4>Possibly broke spacetime</h4>
-                  <p>
-                    Integer eu ante ornare amet commetus vestibulum blandit
-                    integer in curae ac faucibus integer adipiscing ornare amet.
-                  </p>
-                </div>
-              </article>
-            </div>
+            <p style="text-align: center;">
+              <a href="CV.pdf" target="_blank" class="button primary">
+                Voir mon CV
+              </a>
+            </p>
           </div>
         </section>
 
-        <!-- Four -->
         <section id="four">
           <div class="container">
             <h3>Me joindre</h3>
-            <p>
-              Integer eu ante ornare amet commetus vestibulum blandit integer in
-              curae ac faucibus integer non.
+            <p style="text-align: center;">
+              <a href="mailto:jeanne.dionne14@gmail.com" class="button primary">
+                Envoyer un email
+              </a>
             </p>
-            <div class="row gtr-uniform">
-              <div class="col-12">
-                <!-- Vous pouvez mettre votre email ici au lieu de your-email@example.com -->
-                <a
-                  href="mailto:jeanne.dionne14@gmail.com?subject=Sujet&body=Votre message ici."
-                  class="button primary"
-                >
-                  Envoyer un email
-                </a>
-              </div>
-            </div>
           </div>
         </section>
-        <!-- Five -->
-        <!-- -->
       </div>
 
-      <!-- Footer -->
       <section id="footer">
         <div class="container">
           <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
+            <li>&copy; Jeanne Dionne. Tous droits réservés.</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
           </ul>
         </div>
       </section>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -192,6 +303,3 @@ Diplôme d’étude collégial obtenu en 2022
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
-
->>>>>>> 3b82556481b3279052642fc5c566bdd36102fe7d
