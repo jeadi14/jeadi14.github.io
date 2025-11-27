@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Adrien Cloutier">
+
+<title>Consignes pour le travail de fin de session (2e itération)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="consignes_travail_final_files/libs/clipboard/clipboard.min.js"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/popper.min.js"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="consignes_travail_final_files/libs/quarto-html/anchor.min.js"></script>
+<link href="consignes_travail_final_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="consignes_travail_final_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="consignes_travail_final_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="consignes_travail_final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="consignes_travail_final_files/libs/bootstrap/bootstrap-184d526a5bcbf6979234d6aa1212e888.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#étape-1-créer-un-cv-et-lajouter-à-votre-site" id="toc-étape-1-créer-un-cv-et-lajouter-à-votre-site" class="nav-link active" data-scroll-target="#étape-1-créer-un-cv-et-lajouter-à-votre-site"><span class="header-section-number">1</span> Étape 1 : Créer un CV et l’ajouter à votre site</a></li>
+  <li><a href="#étape-2-intégrer-un-lien-vers-le-cv-en-pdf-et-afficher-un-aperçu-dans-la-section-mon-cv" id="toc-étape-2-intégrer-un-lien-vers-le-cv-en-pdf-et-afficher-un-aperçu-dans-la-section-mon-cv" class="nav-link" data-scroll-target="#étape-2-intégrer-un-lien-vers-le-cv-en-pdf-et-afficher-un-aperçu-dans-la-section-mon-cv"><span class="header-section-number">2</span> Étape 2 : Intégrer un lien vers le CV en PDF et afficher un aperçu dans la section «Mon CV»</a></li>
+  <li><a href="#étape-3-ajouter-une-section-mes-projets-et-intégrer-un-projet-de-session" id="toc-étape-3-ajouter-une-section-mes-projets-et-intégrer-un-projet-de-session" class="nav-link" data-scroll-target="#étape-3-ajouter-une-section-mes-projets-et-intégrer-un-projet-de-session"><span class="header-section-number">3</span> Étape 3 : Ajouter une section «Mes Projets» et intégrer un projet de session</a>
+  <ul class="collapse">
+  <li><a href="#créer-la-section-mes-projets-dans-le-code-html" id="toc-créer-la-section-mes-projets-dans-le-code-html" class="nav-link" data-scroll-target="#créer-la-section-mes-projets-dans-le-code-html"><span class="header-section-number">3.1</span> Créer la section «Mes Projets» dans le code HTML</a></li>
+  <li><a href="#préparer-le-document-r-markdown" id="toc-préparer-le-document-r-markdown" class="nav-link" data-scroll-target="#préparer-le-document-r-markdown"><span class="header-section-number">3.2</span> Préparer le document R Markdown</a></li>
+  <li><a href="#remplir-le-document-r-markdown" id="toc-remplir-le-document-r-markdown" class="nav-link" data-scroll-target="#remplir-le-document-r-markdown"><span class="header-section-number">3.3</span> Remplir le document R Markdown</a></li>
+  <li><a href="#ajoutez-tous-les-fichiers-pertinents-à-votre-répertoire-github" id="toc-ajoutez-tous-les-fichiers-pertinents-à-votre-répertoire-github" class="nav-link" data-scroll-target="#ajoutez-tous-les-fichiers-pertinents-à-votre-répertoire-github"><span class="header-section-number">3.4</span> Ajoutez tous les fichiers pertinents à votre répertoire GitHub</a></li>
+  <li><a href="#critères-dévaluation-de-la-2e-itération" id="toc-critères-dévaluation-de-la-2e-itération" class="nav-link" data-scroll-target="#critères-dévaluation-de-la-2e-itération"><span class="header-section-number">3.5</span> Critères d’évaluation de la 2e itération</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="consignes_travail_final.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="consignes_travail_final.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Consignes pour le travail de fin de session (2e itération)</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">POL-6078: Outils numériques de recherche en sciences sociales</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>Adrien Cloutier </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1 janvier 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Bravo pour la première itération de votre site web ! Dans cette deuxième itération, vous allez enrichir votre site avec un CV en format PDF, ajouter une nouvelle section pour héberger vos projets et y déposer déjà un premier projet. Suivez les étapes ci-dessous pour intégrer ces nouveaux éléments.</p>
+<section id="étape-1-créer-un-cv-et-lajouter-à-votre-site" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="étape-1-créer-un-cv-et-lajouter-à-votre-site"><span class="header-section-number">1</span> Étape 1 : Créer un CV et l’ajouter à votre site</h2>
+<ol type="1">
+<li><p><strong>Choisissez un gabarit de CV en LaTeX</strong> : <a href="https://fr.overleaf.com/gallery/tagged/cv">Overleaf</a> présente de nombreux gabarits et est simple d’utilisation, mais vous pouvez fouiller ailleurs sans problème.</p></li>
+<li><p><strong>Complétez votre CV</strong> : Remplissez le gabarit avec vos informations. Assurez-vous que votre CV est complet et bien présenté.</p></li>
+<li><p><strong>Enregistrez votre CV en PDF</strong> : Une fois terminé, exportez votre CV en format PDF.</p></li>
+<li><p><strong>Ajoutez le code source et le PDF de votre CV à votre répertoire GitHub</strong> :</p>
+<ul>
+<li>Créez un dossier nommé <code>cv</code> à la racine de votre répertoire GitHub.</li>
+<li>Placez-y votre fichier LaTeX.</li>
+<li>Placez également votre CV en PDF dans ce dossier.</li>
+<li>Prenez une capture d’écran de la première page de votre CV et enregistrez-la dans le même dossier <code>cv</code>, sous le nom <code>cv.png</code>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="étape-2-intégrer-un-lien-vers-le-cv-en-pdf-et-afficher-un-aperçu-dans-la-section-mon-cv" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="étape-2-intégrer-un-lien-vers-le-cv-en-pdf-et-afficher-un-aperçu-dans-la-section-mon-cv"><span class="header-section-number">2</span> Étape 2 : Intégrer un lien vers le CV en PDF et afficher un aperçu dans la section «Mon CV»</h2>
+<ol type="1">
+<li><strong>Modifiez la section «Mon CV» dans le code HTML</strong> :
+<ul>
+<li><p>Dans votre fichier <code>index.html</code>, localisez la section <code>three</code>, qui commence par :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Three --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> id</span><span class="op">=</span><span class="st">"three"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ul></li>
+<li><strong>Ajoutez le lien vers le CV et l’image d’aperçu</strong> :
+<ul>
+<li>Remplacez le contenu de cette section avec les modifications ci-dessous pour intégrer le lien vers le CV PDF ainsi que l’aperçu de l’image.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Three --&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> id</span><span class="op">=</span><span class="st">"three"</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"container"</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Mon CV<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      Vous trouverez ci-dessous un aperçu de mon CV. Cliquez sur l'image ou le bouton pour consulter le document complet en format PDF.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"features"</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- Aperçu du CV en image --&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"cv/cv.pdf"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"image"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"cv/cv.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Aperçu du CV"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"inner"</span><span class="dt">&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">h4</span><span class="dt">&gt;</span>Consultez mon CV<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            Cliquez sur l'image ci-dessus ou sur le lien ci-dessous pour ouvrir mon CV en PDF dans un nouvel onglet.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>          <span class="co">&lt;!-- Lien direct vers le CV en PDF --&gt;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"cv/cv.pdf"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"button primary"</span><span class="dt">&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>              Voir le CV en PDF</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><strong>Vérifiez l’affichage de votre site</strong> :
+<ul>
+<li>Enregistrez les modifications et poussez-les sur GitHub.</li>
+<li>Accédez à votre site et allez à la section «Mon CV» pour vérifier que l’image s’affiche correctement et que les liens vers le CV en PDF fonctionnent.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="étape-3-ajouter-une-section-mes-projets-et-intégrer-un-projet-de-session" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="étape-3-ajouter-une-section-mes-projets-et-intégrer-un-projet-de-session"><span class="header-section-number">3</span> Étape 3 : Ajouter une section «Mes Projets» et intégrer un projet de session</h2>
+<p>Après la section «Mon CV», nous allons ajouter une nouvelle section nommée «Mes Projets». Notez que dans le code initial, il y a seulement 4 sections : «À propos», «Mon travail», «Mon CV», et «Me joindre». Vous devrez donc insérer cette cinquième section <strong>entre «Mon CV» et «Me joindre»</strong>.</p>
+<section id="créer-la-section-mes-projets-dans-le-code-html" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="créer-la-section-mes-projets-dans-le-code-html"><span class="header-section-number">3.1</span> Créer la section «Mes Projets» dans le code HTML</h3>
+<ol type="1">
+<li><strong>Ajoutez un onglet «Mes Projets»</strong> dans le menu de navigation :
+<ul>
+<li><p>Dans votre fichier <code>index.html</code>, localisez la section de navigation :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">nav</span><span class="ot"> id</span><span class="op">=</span><span class="st">"nav"</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#one"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"active"</span><span class="dt">&gt;</span>À propos<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#two"</span><span class="dt">&gt;</span>Mon travail<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#three"</span><span class="dt">&gt;</span>Mon CV<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#four"</span><span class="dt">&gt;</span>Contact<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Ajoutez entre <code>three</code> et <code>four</code> le lien vers cette nouvelle section en insérant le code suivant :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#projets"</span><span class="dt">&gt;</span>Mes Projets<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ul></li>
+<li><strong>Insérez la section «Mes Projets» dans le code HTML</strong> :
+<ul>
+<li>Placez cette section après les sections entre <code>three</code> et <code>four</code> de votre fichier <code>index.html</code>, de façon à ce qu’elle apparaisse avant «Me joindre».</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Mes projets --&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> id</span><span class="op">=</span><span class="st">"projets"</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"container"</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Mes Projets<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      Voici une sélection de mes projets. Cliquez sur l'image pour découvrir le projet complet.</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"features"</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- Aperçu du projet en image --&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"projet_session/projet.html"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"image"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"projet_session/projet.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Aperçu du projet de session"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"inner"</span><span class="dt">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">h4</span><span class="dt">&gt;</span>Cours d'outils numériques (POL-6078)<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>            Cliquez sur l'image ou sur le lien ci-dessous pour explorer le contenu de ce projet.</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>          <span class="co">&lt;!-- Lien direct vers le projet --&gt;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"projet_session/projet.html"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"button primary"</span><span class="dt">&gt;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>              Voir le projet complet</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">article</span><span class="dt">&gt;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="préparer-le-document-r-markdown" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="préparer-le-document-r-markdown"><span class="header-section-number">3.2</span> Préparer le document R Markdown</h3>
+<ol type="1">
+<li><strong>Créez un dossier nommé <code>projet_session</code></strong> dans votre répertoire GitHub :
+<ul>
+<li>Ce dossier contiendra le fichier R Markdown et les ressources associées à votre projet de session.</li>
+</ul></li>
+<li><strong>Dans le dossier <code>projet_session</code>, enregistrer un fichier R Markdown nommé <code>projet.Rmd</code></strong>
+<ul>
+<li>Vous pouvez utiliser un gabarit R Markdown trouvé en ligne ou démarrer d’une page blanche via RStudio.</li>
+<li>Pour créer une fichier R Markdown sur RStudio, cliquez sur «Files», «New File», puis «R Markdown…»</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rmarkdown.png" class="img-fluid figure-img"></p>
+<figcaption>Création d’un fichier R Markdown</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li><strong>Exportez le fichier R Markdown en HTML</strong> :
+<ul>
+<li>Vous pouvez vider le contenu par défaut de cette page, ou conserver l’en-tête, au choix.</li>
+<li>L’important sera d’exporter le résultat (on dit « knit », en langage Markdown) en format html et de l’enregistrer dans votre dossier <code>projet_session</code></li>
+<li>Une fois le fichier <code>projet.md</code> complété, exportez-le en HTML et nommez ce fichier <code>projet.html</code>.</li>
+<li>Prenez une capture d’écran de votre projet (ou une image trouvée sur le Web, au choix) et placez l’image d’aperçu du projet dans le même dossier <code>projet_session</code> et nommez-la <code>projet.png</code>.</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/knit_html.png" class="img-fluid figure-img"></p>
+<figcaption>Export en HTML avec Knit</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li><strong>Vérifiez l’affichage de votre site</strong> :
+<ul>
+<li>Enregistrez et poussez vos modifications sur GitHub.</li>
+<li>Allez à la section « Mes Projets » pour vérifier que l’image d’aperçu est bien affichée et que le lien mène au contenu du projet en HTML.</li>
+</ul></li>
+</ol>
+</section>
+<section id="remplir-le-document-r-markdown" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="remplir-le-document-r-markdown"><span class="header-section-number">3.3</span> Remplir le document R Markdown</h3>
+<p>Dans cette étape, vous allez réaliser un court projet de session dans votre page HTML de projet (écrite en R Markdown) qui démontrera votre capacité à utiliser différents outils de recherche tout au long du cycle de la recherche, tel que représenté dans l’image du cycle de recherche hypothético-déductif issue de la méthode scientifique.</p>
+<p>En fonction des étapes indiquées dans l’image et vues en classe, suivez les consignes ci-dessous pour structurer votre projet de session.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cycle_recherche_outils.png" class="img-fluid figure-img"></p>
+<figcaption>Cycle de recherche hypothético-déductif et outils numériques</figcaption>
+</figure>
+</div>
+<section id="étapes-du-projet" class="level4" data-number="3.3.1">
+<h4 data-number="3.3.1" class="anchored" data-anchor-id="étapes-du-projet"><span class="header-section-number">3.3.1</span> Étapes du projet</h4>
+<ol type="1">
+<li><strong>Question de recherche et hypothèse</strong> :
+<ul>
+<li>Posez une question de recherche.</li>
+<li>Effectuez une brève revue de la littérature scientifique pour dériver une hypothèse de recherche en lien avec votre question.</li>
+<li><strong>Indiquez les outils utilisés</strong> pour cette étape (ex. Google Scholar, Zotero, Elicit, etc.) et détaillez pourquoi et comment vous les avez utilisés (par exemple, pour trouver des articles, organiser des sources, etc.).</li>
+</ul></li>
+<li><strong>Collecte de données</strong> :
+<ul>
+<li>Choisissez un outil pour collecter des données en lien avec votre hypothèse (ex. Factiva, Eureka, un questionnaire en ligne, une base de données en libre accès, etc., des données extraites du Web, etc.).</li>
+<li><strong>Présentez l’outil choisi</strong> et expliquez en détail comment vous l’avez utilisé pour collecter vos données.</li>
+</ul></li>
+<li><strong>Analyse et visualisation des données</strong> :
+<ul>
+<li>Utilisez un outil pour analyser et/ou visualiser les données que vous avez collectées (ex. Excel, R, Python, Tableau, etc.).</li>
+<li><strong>Détaillez l’outil utilisé</strong> et expliquez comment vous vous en êtes servi pour produire des résultats ou des visualisations.</li>
+</ul></li>
+<li><strong>Discussion</strong> :
+<ul>
+<li>Ajoutez une section de discussion à la fin de votre projet.</li>
+<li>Dans cette discussion, expliquez vos choix d’outils en fonction <strong>des valeurs, de la philosophie ou des besoins</strong> qui ont guidé vos décisions.</li>
+<li>Basez-vous, entre autres, sur les critères de sélection des outils vus en classe: l’accessibilité, l’existence d’une communauté d’utilisateurs, la popularité dans votre domaine, leur compatibilité avec d’autres outils, le besoin de transparence et la réplicabilité, et la capacité d’adaptabilité et de flexibilité des outils.</li>
+</ul></li>
+</ol>
+</section>
+<section id="important" class="level4" data-number="3.3.2">
+<h4 data-number="3.3.2" class="anchored" data-anchor-id="important"><span class="header-section-number">3.3.2</span> Important</h4>
+<p>Il n’y a pas de bonne ou mauvaise réponse pour ce travail. L’objectif est de démontrer votre capacité à utiliser des outils numériques de recherche tout au long d’un processus de recherche, de la réflexion sur une question jusqu’à la présentation des résultats. Ce travail doit refléter votre compréhension et votre maîtrise des outils ainsi que la manière dont vous les avez intégrés dans le cycle de la recherche.</p>
+</section>
+</section>
+<section id="ajoutez-tous-les-fichiers-pertinents-à-votre-répertoire-github" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="ajoutez-tous-les-fichiers-pertinents-à-votre-répertoire-github"><span class="header-section-number">3.4</span> Ajoutez tous les fichiers pertinents à votre répertoire GitHub</h3>
+<p>Votre dossier <code>projet_session</code> devrait contenir un dossier <code>code</code> à l’intérieur duquel se retrouvent les codes R (si vous utilisez cet outil, par exemple) créés pour l’analyse et la visualisation de données. Il pourrait y avoir également un dossier <code>data</code>, dans lequel se retrouvent les données collectées, et un dossier <code>images</code> dans lequel se trouvent vos graphiques et vos visualisations. Peu importe les outils choisis, assurez-vous que tout le contenu pertinent à l’évaluation de votre travail se retrouve dans le dossier <code>projet_session</code> de votre repo GitHub.</p>
+<hr>
+<p>Une fois le projet complété, assurez-vous de bien respecter la structure décrite ci-dessus pour que chaque étape du cycle de recherche soit clairement identifiable dans votre document.</p>
+<p>Bien joué!</p>
+<hr>
+</section>
+<section id="critères-dévaluation-de-la-2e-itération" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="critères-dévaluation-de-la-2e-itération"><span class="header-section-number">3.5</span> Critères d’évaluation de la 2e itération</h3>
+<p><strong>1. Site Web sur GitHub (20%)</strong> - Le site web est hébergé correctement sur GitHub, et le répertoire est accessible. - Les commits sont visibles et montrent un suivi régulier du travail effectué. - Les fichiers (PDF, images, fichier markdown, HTML du projet) sont bien organisés dans les dossiers indiqués (<code>cv</code>, <code>projet_session</code>).</p>
+<p><strong>2. Respect des consignes et des étapes (30%)</strong> - L’étudiant.e a suivi toutes les étapes du ReadMe. - Les nouvelles sections «Mon CV» et «Mes Projets» sont présentes et complétées correctement. - Le lien vers le CV en PDF fonctionne, et l’aperçu du CV s’affiche bien dans la section «Mon CV». - La section «Mes Projets» contient une image cliquable qui mène au fichier HTML du projet de session. - La page HTML du projet de session respecte la structure demandée, avec chaque étape du cycle de recherche clairement identifiable.</p>
+<p><strong>3. Qualité et clarté du contenu de recherche (40%)</strong> - La question de recherche, l’hypothèse, la collecte de données, l’analyse et la discussion sont clairs et pertinents. - L’étudiant.e décrit de manière détaillée les outils utilisés à chaque étape et la manière dont ils ont été appliqués. - La visualisation de données est intéressante, pertinente et bien réalisée. - La discussion sur les choix d’outils montre une réflexion personnelle et justifie les choix par rapport aux valeurs ou à la philosophie de recherche.</p>
+<p><strong>4. Créativité et personnalisation (10%)</strong> - L’étudiant.e a pris des initiatives pour personnaliser son site au-delà des consignes de base, par exemple : - Amélioration du design ou des couleurs du site. - Choix d’un style ou d’une mise en page unique pour le projet de session. - Utilisation avancée de markdown ou d’éléments visuels pour enrichir la présentation du projet.</p>
+<!-- -->
+
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Code source</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Consignes pour le travail de fin de session (2e itération)"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "POL-6078: Outils numériques de recherche en sciences sociales"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Adrien Cloutier"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "Automne 2025"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> fr</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Options globales pour le code</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="an">code-block-border-left:</span><span class="co"> true   # Bordure à gauche des blocs de code</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="an">code-overflow:</span><span class="co"> wrap             # Retour à la ligne automatique pour le code long</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">  # Format HTML : idéal pour la consultation en ligne, avec navigation interactive</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true                    # Table des matières cliquable</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3                 # Profondeur de la table des matières</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true        # Numérotation automatique des sections</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo                 # Thème visuel (cosmo, flatly, journal, etc.)</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true              # Permet de cacher/afficher le code</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true             # Ajoute des outils pour manipuler le code</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co">  # Format PDF : excellent pour l'impression et la distribution officielle</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true                    # Table des matières</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true        # Numérotation des sections</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">    colorlinks: true             # Liens en couleur</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">    geometry:                    # Marges du document</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co">      - margin=2.5cm</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co">    papersize: letter            # Format lettre (ou a4 pour format européen)</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight-style: tango       # Style de coloration pour le code</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co">    code-block-bg: true          # Fond gris pour les blocs de code</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co">    keep-tex: true               # Garde le fichier .tex intermédiaire (utile pour déboguer)</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co">    include-in-header:           # Options LaTeX pour gérer le code long</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="co">      text: |</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co">        \usepackage{fvextra}</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co">        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\},fontsize=\small}</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="co">  # Format DOCX : pour Microsoft Word, permet l'édition et l'annotation</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight-style: github      # Style de coloration syntaxique</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>Bravo pour la première itération de votre site web ! Dans cette deuxième itération, vous allez enrichir votre site avec un CV en format PDF, ajouter une nouvelle section pour héberger vos projets et y déposer déjà un premier projet. Suivez les étapes ci-dessous pour intégrer ces nouveaux éléments.</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Étape 1 : Créer un CV et l'ajouter à votre site</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Choisissez un gabarit de CV en LaTeX** : <span class="co">[</span><span class="ot">Overleaf</span><span class="co">](https://fr.overleaf.com/gallery/tagged/cv)</span> présente de nombreux gabarits et est simple d'utilisation, mais vous pouvez fouiller ailleurs sans problème.</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Complétez votre CV** : Remplissez le gabarit avec vos informations. Assurez-vous que votre CV est complet et bien présenté.</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Enregistrez votre CV en PDF** : Une fois terminé, exportez votre CV en format PDF.</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Ajoutez le code source et le PDF de votre CV à votre répertoire GitHub** :</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Créez un dossier nommé <span class="in">`cv`</span> à la racine de votre répertoire GitHub.</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Placez-y votre fichier LaTeX.</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Placez également votre CV en PDF dans ce dossier.</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Prenez une capture d'écran de la première page de votre CV et enregistrez-la dans le même dossier <span class="in">`cv`</span>, sous le nom <span class="in">`cv.png`</span>.</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Étape 2 : Intégrer un lien vers le CV en PDF et afficher un aperçu dans la section «Mon CV»</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Modifiez la section «Mon CV» dans le code HTML** :</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Dans votre fichier <span class="in">`index.html`</span>, localisez la section <span class="in">`three`</span>, qui commence par :</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>     <span class="in">```html</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;!--</span> Three <span class="op">--&gt;</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;</span>section id<span class="op">=</span><span class="st">"three"</span><span class="op">&gt;</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>     <span class="in">```</span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Ajoutez le lien vers le CV et l'image d'aperçu** :</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Remplacez le contenu de cette section avec les modifications ci-dessous pour intégrer le lien vers le CV PDF ainsi que l'aperçu de l'image.</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>   <span class="in">```html</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;!--</span> Three <span class="op">--&gt;</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;</span>section id<span class="op">=</span><span class="st">"three"</span><span class="op">&gt;</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>h3<span class="op">&gt;</span>Mon CV<span class="op">&lt;/</span>h3<span class="op">&gt;</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>         Vous trouverez ci<span class="op">-</span>dessous un aperçu de mon CV<span class="op">.</span> Cliquez sur l<span class="ch">'i</span><span class="er">mage ou le bouton pour consulter le document complet en format PDF.</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"features"</span><span class="op">&gt;</span></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>         <span class="op">&lt;</span>article<span class="op">&gt;</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;!--</span> Aperçu du CV en image <span class="op">--&gt;</span></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"cv/cv.pdf"</span> class<span class="op">=</span><span class="st">"image"</span> target<span class="op">=</span><span class="st">"_blank"</span><span class="op">&gt;</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>img src<span class="op">=</span><span class="st">"cv/cv.png"</span> alt<span class="op">=</span><span class="st">"Aperçu du CV"</span> <span class="op">/&gt;</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"inner"</span><span class="op">&gt;</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>h4<span class="op">&gt;</span>Consultez mon CV<span class="op">&lt;/</span>h4<span class="op">&gt;</span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>               Cliquez sur l<span class="ch">'i</span><span class="er">mage ci-dessus ou sur le lien ci-dessous pour ouvrir mon CV en PDF dans un nouvel onglet.</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;!--</span> Lien direct vers le CV en PDF <span class="op">--&gt;</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>               <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"cv/cv.pdf"</span> target<span class="op">=</span><span class="st">"_blank"</span> class<span class="op">=</span><span class="st">"button primary"</span><span class="op">&gt;</span></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>                 Voir le CV en PDF</span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>               <span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>         <span class="op">&lt;/</span>article<span class="op">&gt;</span></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;/</span>section<span class="op">&gt;</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Vérifiez l'affichage de votre site** :</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Enregistrez les modifications et poussez-les sur GitHub.</span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Accédez à votre site et allez à la section «Mon CV» pour vérifier que l'image s'affiche correctement et que les liens vers le CV en PDF fonctionnent.</span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a><span class="fu">## Étape 3 : Ajouter une section «Mes Projets» et intégrer un projet de session</span></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>Après la section «Mon CV», nous allons ajouter une nouvelle section nommée «Mes Projets». Notez que dans le code initial, il y a seulement 4 sections : «À propos», «Mon travail», «Mon CV», et «Me joindre». Vous devrez donc insérer cette cinquième section **entre «Mon CV» et «Me joindre»**.</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="fu">### Créer la section «Mes Projets» dans le code HTML</span></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Ajoutez un onglet «Mes Projets»** dans le menu de navigation :</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Dans votre fichier <span class="in">`index.html`</span>, localisez la section de navigation :</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>     <span class="in">```html</span></span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>      <span class="op">&lt;</span>nav id<span class="op">=</span><span class="st">"nav"</span><span class="op">&gt;</span></span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>ul<span class="op">&gt;</span></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>          <span class="op">&lt;</span>li<span class="op">&gt;&lt;</span>a href<span class="op">=</span><span class="st">"#one"</span> class<span class="op">=</span><span class="st">"active"</span><span class="op">&gt;</span>À propos<span class="op">&lt;/</span>a<span class="op">&gt;&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>          <span class="op">&lt;</span>li<span class="op">&gt;&lt;</span>a href<span class="op">=</span><span class="st">"#two"</span><span class="op">&gt;</span>Mon travail<span class="op">&lt;/</span>a<span class="op">&gt;&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>          <span class="op">&lt;</span>li<span class="op">&gt;&lt;</span>a href<span class="op">=</span><span class="st">"#three"</span><span class="op">&gt;</span>Mon CV<span class="op">&lt;/</span>a<span class="op">&gt;&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>          <span class="op">&lt;</span>li<span class="op">&gt;&lt;</span>a href<span class="op">=</span><span class="st">"#four"</span><span class="op">&gt;</span>Contact<span class="op">&lt;/</span>a<span class="op">&gt;&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;/</span>ul<span class="op">&gt;</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>      <span class="op">&lt;/</span>nav<span class="op">&gt;</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>     <span class="in">```</span></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Ajoutez entre <span class="in">`three`</span> et  <span class="in">`four`</span> le lien vers cette nouvelle section en insérant le code suivant :</span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>     <span class="in">```html</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;</span>li<span class="op">&gt;&lt;</span>a href<span class="op">=</span><span class="st">"#projets"</span><span class="op">&gt;</span>Mes Projets<span class="op">&lt;/</span>a<span class="op">&gt;&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>     <span class="in">```</span></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Insérez la section «Mes Projets» dans le code HTML** :</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Placez cette section après les sections entre <span class="in">`three`</span> et  <span class="in">`four`</span> de votre fichier <span class="in">`index.html`</span>, de façon à ce qu'elle apparaisse avant «Me joindre».</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>   <span class="in">```html</span></span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;!--</span> Mes projets <span class="op">--&gt;</span></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;</span>section id<span class="op">=</span><span class="st">"projets"</span><span class="op">&gt;</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>h3<span class="op">&gt;</span>Mes Projets<span class="op">&lt;/</span>h3<span class="op">&gt;</span></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>         Voici une sélection de mes projets<span class="op">.</span> Cliquez sur l<span class="ch">'i</span><span class="er">mage pour découvrir le projet complet.</span></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"features"</span><span class="op">&gt;</span></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>         <span class="op">&lt;</span>article<span class="op">&gt;</span></span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;!--</span> Aperçu du projet en image <span class="op">--&gt;</span></span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"projet_session/projet.html"</span> class<span class="op">=</span><span class="st">"image"</span> target<span class="op">=</span><span class="st">"_blank"</span><span class="op">&gt;</span></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>img src<span class="op">=</span><span class="st">"projet_session/projet.png"</span> alt<span class="op">=</span><span class="st">"Aperçu du projet de session"</span> <span class="op">/&gt;</span></span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;</span>div class<span class="op">=</span><span class="st">"inner"</span><span class="op">&gt;</span></span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>h4<span class="op">&gt;</span>Cours d<span class="ch">'o</span><span class="er">utils numériques (POL-6078)&lt;/h4&gt;</span></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a>               Cliquez sur l<span class="ch">'i</span><span class="er">mage ou sur le lien ci-dessous pour explorer le contenu de ce projet.</span></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;!--</span> Lien direct vers le projet <span class="op">--&gt;</span></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;</span>p<span class="op">&gt;</span></span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a>               <span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"projet_session/projet.html"</span> target<span class="op">=</span><span class="st">"_blank"</span> class<span class="op">=</span><span class="st">"button primary"</span><span class="op">&gt;</span></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a>                 Voir le projet complet</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>               <span class="op">&lt;/</span>a<span class="op">&gt;</span></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>             <span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>           <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a>         <span class="op">&lt;/</span>article<span class="op">&gt;</span></span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a>       <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a>     <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a>   <span class="op">&lt;/</span>section<span class="op">&gt;</span></span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a><span class="fu">### Préparer le document R Markdown</span></span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Créez un dossier nommé `projet_session`** dans votre répertoire GitHub :</span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Ce dossier contiendra le fichier R Markdown et les ressources associées à votre projet de session.</span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Dans le dossier `projet_session`, enregistrer un fichier R Markdown nommé `projet.Rmd`**</span>
+<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Vous pouvez utiliser un gabarit R Markdown trouvé en ligne ou démarrer d'une page blanche via RStudio.</span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Pour créer une fichier R Markdown sur RStudio, cliquez sur «Files», «New File», puis «R Markdown...»</span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="al">![Création d'un fichier R Markdown](images/rmarkdown.png)</span></span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Exportez le fichier R Markdown en HTML** :</span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Vous pouvez vider le contenu par défaut de cette page, ou conserver l'en-tête, au choix.</span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>L'important sera d'exporter le résultat (on dit « knit », en langage Markdown) en format html et de l'enregistrer dans votre dossier <span class="in">`projet_session`</span></span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Une fois le fichier <span class="in">`projet.md`</span> complété, exportez-le en HTML et nommez ce fichier <span class="in">`projet.html`</span>.</span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Prenez une capture d'écran de votre projet (ou une image trouvée sur le Web, au choix) et placez l'image d'aperçu du projet dans le même dossier <span class="in">`projet_session`</span> et nommez-la <span class="in">`projet.png`</span>.</span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a><span class="al">![Export en HTML avec Knit](images/knit_html.png)</span></span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Vérifiez l'affichage de votre site** :</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Enregistrez et poussez vos modifications sur GitHub.</span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Allez à la section « Mes Projets » pour vérifier que l'image d'aperçu est bien affichée et que le lien mène au contenu du projet en HTML.</span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Remplir le document R Markdown</span></span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a>Dans cette étape, vous allez réaliser un court projet de session dans votre page HTML de projet (écrite en R Markdown) qui démontrera votre capacité à utiliser différents outils de recherche tout au long du cycle de la recherche, tel que représenté dans l'image du cycle de recherche hypothético-déductif issue de la méthode scientifique.</span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a>En fonction des étapes indiquées dans l'image et vues en classe, suivez les consignes ci-dessous pour structurer votre projet de session.</span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a><span class="al">![Cycle de recherche hypothético-déductif et outils numériques](images/cycle_recherche_outils.png)</span></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Étapes du projet</span></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Question de recherche et hypothèse** :</span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Posez une question de recherche.</span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Effectuez une brève revue de la littérature scientifique pour dériver une hypothèse de recherche en lien avec votre question.</span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Indiquez les outils utilisés** pour cette étape (ex. Google Scholar, Zotero, Elicit, etc.) et détaillez pourquoi et comment vous les avez utilisés (par exemple, pour trouver des articles, organiser des sources, etc.).</span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Collecte de données** :</span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Choisissez un outil pour collecter des données en lien avec votre hypothèse (ex. Factiva, Eureka, un questionnaire en ligne, une base de données en libre accès, etc., des données extraites du Web, etc.).</span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Présentez l'outil choisi** et expliquez en détail comment vous l'avez utilisé pour collecter vos données.</span>
+<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Analyse et visualisation des données** :</span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Utilisez un outil pour analyser et/ou visualiser les données que vous avez collectées (ex. Excel, R, Python, Tableau, etc.).</span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Détaillez l'outil utilisé** et expliquez comment vous vous en êtes servi pour produire des résultats ou des visualisations.</span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Discussion** :</span>
+<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Ajoutez une section de discussion à la fin de votre projet.</span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Dans cette discussion, expliquez vos choix d'outils en fonction **des valeurs, de la philosophie ou des besoins** qui ont guidé vos décisions.</span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a><span class="ss">   -  </span>Basez-vous, entre autres, sur les critères de sélection des outils vus en classe: l'accessibilité, l'existence d'une communauté d'utilisateurs, la popularité dans votre domaine, leur compatibilité avec d'autres outils, le besoin de transparence et la réplicabilité, et la capacité d'adaptabilité et de flexibilité des outils.</span>
+<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Important</span></span>
+<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a>Il n'y a pas de bonne ou mauvaise réponse pour ce travail. L'objectif est de démontrer votre capacité à utiliser des outils numériques de recherche tout au long d'un processus de recherche, de la réflexion sur une question jusqu'à la présentation des résultats. Ce travail doit refléter votre compréhension et votre maîtrise des outils ainsi que la manière dont vous les avez intégrés dans le cycle de la recherche.</span>
+<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ajoutez tous les fichiers pertinents à votre répertoire GitHub</span></span>
+<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>Votre dossier <span class="in">`projet_session`</span> devrait contenir un dossier <span class="in">`code`</span> à l'intérieur duquel se retrouvent les codes R (si vous utilisez cet outil, par exemple) créés pour l'analyse et la visualisation de données. Il pourrait y avoir également un dossier <span class="in">`data`</span>, dans lequel se retrouvent les données collectées, et un dossier <span class="in">`images`</span> dans lequel se trouvent vos graphiques et vos visualisations. Peu importe les outils choisis, assurez-vous que tout le contenu pertinent à l'évaluation de votre travail se retrouve dans le dossier <span class="in">`projet_session`</span> de votre repo GitHub.</span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a>Une fois le projet complété, assurez-vous de bien respecter la structure décrite ci-dessus pour que chaque étape du cycle de recherche soit clairement identifiable dans votre document.</span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a>Bien joué!</span>
+<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a><span class="fu">### Critères d'évaluation de la 2e itération</span></span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>**1. Site Web sur GitHub (20%)**</span>
+<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Le site web est hébergé correctement sur GitHub, et le répertoire est accessible.</span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Les commits sont visibles et montrent un suivi régulier du travail effectué.</span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Les fichiers (PDF, images, fichier markdown, HTML du projet) sont bien organisés dans les dossiers indiqués (<span class="in">`cv`</span>, <span class="in">`projet_session`</span>).</span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>**2. Respect des consignes et des étapes (30%)**</span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>L'étudiant.e a suivi toutes les étapes du ReadMe.</span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Les nouvelles sections «Mon CV» et «Mes Projets» sont présentes et complétées correctement.</span>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Le lien vers le CV en PDF fonctionne, et l'aperçu du CV s'affiche bien dans la section «Mon CV».</span>
+<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>La section «Mes Projets» contient une image cliquable qui mène au fichier HTML du projet de session.</span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>La page HTML du projet de session respecte la structure demandée, avec chaque étape du cycle de recherche clairement identifiable.</span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>**3. Qualité et clarté du contenu de recherche (40%)**</span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>La question de recherche, l'hypothèse, la collecte de données, l'analyse et la discussion sont clairs et pertinents.</span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>L'étudiant.e décrit de manière détaillée les outils utilisés à chaque étape et la manière dont ils ont été appliqués.</span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>La visualisation de données est intéressante, pertinente et bien réalisée.</span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>La discussion sur les choix d'outils montre une réflexion personnelle et justifie les choix par rapport aux valeurs ou à la philosophie de recherche.</span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a>**4. Créativité et personnalisation (10%)**</span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>L'étudiant.e a pris des initiatives pour personnaliser son site au-delà des consignes de base, par exemple :</span>
+<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Amélioration du design ou des couleurs du site.</span>
+<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Choix d'un style ou d'une mise en page unique pour le projet de session.</span>
+<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Utilisation avancée de markdown ou d'éléments visuels pour enrichir la présentation du projet.</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

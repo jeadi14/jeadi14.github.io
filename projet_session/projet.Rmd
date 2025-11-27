@@ -1,0 +1,518 @@
+---
+title: "Analyse de l'appui à l'indépendance du Québec selon l'âge"
+author: "Jeanne Dionne"
+date: "2025-12-4"
+output: 
+  html_document:
+    toc: false
+    theme: flatly
+    highlight: tango
+    code_folding: hide
+    css: custom.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, 
+                      fig.width=10, fig.height=7, fig.align='center')
+
+# Charger les packages
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(kableExtra)
+```
+
+```{css, echo=FALSE}
+/* Style moderne et élégant - Couleurs du Québec */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: #1a202c;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e9f5 100%);
+  font-size: 16px;
+}
+
+h1 {
+  color: #0c3c6e;
+  border-bottom: 4px solid #0080d0;
+  padding-bottom: 12px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 2.5em;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  color: #1e5a8e;
+  border-left: 5px solid #0080d0;
+  padding-left: 18px;
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+h3 {
+  color: #2d72ac;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+.main-container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 50px;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border-radius: 16px;
+}
+
+.list-group-item.active {
+  background: linear-gradient(135deg, #0080d0 0%, #004d99 100%);
+  border: none;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.author, .date {
+  color: #718096;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* Tableaux modernes */
+table {
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Boîtes d'information - Couleurs du Québec */
+.info-box {
+  background: linear-gradient(135deg, #e6f4ff 0%, #b3d9ff 100%);
+  border-left: 5px solid #0080d0;
+  padding: 25px 30px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,128,208,0.1);
+}
+
+.hypothesis-box {
+  background: linear-gradient(135deg, #f0f9ff 0%, #d9eeff 100%);
+  border-left: 5px solid #0066cc;
+  padding: 25px 30px;
+  margin: 30px 0;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,102,204,0.1);
+}
+
+.results-box {
+  background: linear-gradient(135deg, #e8f5ff 0%, #cce7ff 100%);
+  border-left: 5px solid #0080d0;
+  padding: 25px 30px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,128,208,0.1);
+}
+
+/* Graphiques */
+.figure {
+  margin: 40px auto;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+figcaption {
+  font-style: italic;
+  color: #6b7280;
+  margin-top: 15px;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Code */
+pre {
+  background: #0c3c6e;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 0.9em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+code {
+  color: #66b3ff;
+}
+
+/* Boutons */
+.btn-primary {
+  background: linear-gradient(135deg, #0080d0 0%, #004d99 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,128,208,0.4);
+}
+
+/* Listes */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+ul li:before {
+  content: "▸";
+  color: #0080d0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Références */
+#références ul li:before {
+  content: "📄";
+}
+
+/* Animations subtiles */
+h1, h2, h3 {
+  animation: fadeInDown 0.6s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-box, .hypothesis-box, .results-box {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+```
+
+<div class="info-box">
+
+# Question de recherche
+
+**L'appui à l'indépendance du Québec varie-t-il significativement selon les groupes d'âge ?**
+
+## Cadre théorique
+
+Cette recherche s'appuie sur deux concepts clés :
+
+**Effets de génération (cohorte)** : Les expériences politiques vécues dans la jeunesse marquent durablement les attitudes politiques d'une génération. Celles-ci ont tendance à se cristalliser et à persister tout au long de la vie. Par exemple, les baby-boomers ont tendance à être plus favorables à l'indépendance du Québec, puisqu'ils ont voté lors des deux référendums.  
+
+**Effets du cycle de vie** : Les changements d'attitudes liés au vieillissement et aux transitions de vie peuvent modifier les priorités et opinions politiques d'une personne. Les responsabilités liées à la parentalité, à l'emploi et à la vie adulte en général peuvent entraîner des modifications d'attitude chez les individus. 
+
+<div class="hypothesis-box">
+**Hypothèse de recherche** : Les jeunes adultes (18 à 34 ans) ont un taux de soutien à l'indépendance plus élevé que les personnes âgées de 55 ans et plus. Cette hypothèse s'accorde avec les sondages de cet été qui ont prédit un renouveau générationnel du mouvement souverainiste.
+</div>
+
+</div>
+
+# Revue de littérature
+
+L'été dernier, des sondages ont révélé une hausse du soutien envers le mouvement souverainiste chez les jeunes Québécois, ce qui a surpris tout le monde. Cette tendance a même fait l'objet d'une instrumentalisation par certains partis politiques, dont le Parti québécois. Toutefois, il est pertinent de se poser la question suivante : les jeunes de 18 à 34 ans sont-ils plus favorables à l'indépendance que les autres générations ? La littérature académique concernant l'appui générationnel à la souveraineté québécoise témoigne d'une transformation complexe au fil des décennies. Pour ma brève analyse de la littérature, je vais examiner trois articles traitant de cette question. Cette revue de littérature examine les variations générationnelles dans l'appui à l'indépendance du Québec en analysant deux sondages récents (CROP et Léger, 2025). Les résultats révèlent des différences importantes selon les groupes d'âge, avec des implications pour comprendre l'évolution du mouvement souverainiste.
+
+Mahéo et Bélanger (2024) ont démontré que la génération des baby-boomers était beaucoup plus susceptible de soutenir le projet d'indépendance que les autres cohortes. Ils attribuent cette tendance à trois facteurs clés : un attachement profond à l'identité québécoise, un engagement constant envers le projet d'indépendance, et un soutien électoral significatif au Parti québécois (PQ). Les générations X et Y étaient très favorables à l'indépendance du Québec, mais leur appui a considérablement diminué depuis 2014. Toutefois, il y a une baisse générale de l'appui à l'indépendance : en 2007-2012, il était d'environ 42 %, puis, en 2014-2022, il est tombé à 34 % (Mahéo et Bélanger, 2024).
+
+L'étude de Bélanger et coll. (2008) offre un contraste intéressant en analysant spécifiquement les jeunes (18-34 ans) du milieu des années 2000. Selon leurs conclusions, les jeunes étaient plus favorables à la souveraineté que le reste de la population québécoise à cette époque, ce qui suggère l'existence d'un effet générationnel distinct. De plus, ils mentionnent que le rôle de la Loi 101 en tant qu'intégrateur politique pour les jeunes allophones a été surestimé par les chercheurs. Il n'y a pas de corrélation directe entre un enfant de la loi 101 et son appui à la souveraineté québécoise, d'autres facteurs sont en jeu.
+
+Plus récemment, Bélanger et coll. (2020) ont analysé l'évolution des écarts générationnels en ce qui concerne le vote pour le Parti québécois (PQ) de 2007 à 2018. Ils ont constaté que les personnes nées vers 1950, c'est-à-dire les baby-boomers, se distinguent par leur appui très élevé à la souveraineté.
+
+Ces articles montrent un changement important dans le paysage générationnel souverainiste. Auparavant, les jeunes étaient les principaux instigateurs de ce mouvement. Aujourd'hui, ce sont les baby-boomers qui manifestent le soutien le plus constant. Cette transformation est attribuable au principe de l'« effet de génération » : les personnes nées pendant la Révolution tranquille et ayant été politisées durant les débats référendaires ont conservé leur engagement envers le projet souverainiste à mesure qu'elles vieillissaient, tandis que les générations suivantes, élevées dans un contexte politique distinct, ont développé des points de vue distincts.
+
+# Méthodologie
+
+## Collecte de données
+
+Pour cette analyse, deux sondages d'opinion publique récents ont été utilisés, permettant une triangulation des résultats :
+
+**1. Sondage CROP (juillet-août 2025)**
+
+- **Échelle de mesure** : Opinion sur une échelle à quatre points (très favorable, favorable, défavorable, très défavorable)
+- **Source** : Résultat disponible sur le site web suivant : Fournier, P. (2025). Êtes-vous favorable à la souveraineté du Québec ? https://www.qc125.ca/p/etes-vous-favorable-a-la-souverainete 
+
+**2. Sondage Léger (novembre 2025)**
+
+- **Échelle de mesure** : Question binaire (pour/contre l'indépendance)
+- **Source** : Rapport public accessible sur le site web de Léger Marketing : Léger. (2025, 21 octobre). Trente ans après le référendum de 1995 : où en est l'appui à la souveraineté du Québec ? https://leger360.com/fr/trente-ans-apres-le-referendum-souverainete-du-quebec/
+
+**Méthode d'extraction** : Les tableaux croisés par groupe d'âge ont été extraits manuellement des documents PDF publics. 
+
+# Analyse et visualisation
+
+## Données collectées
+
+```{r donnees}
+# Données CROP (juillet-août 2025)
+donneesCROP <- data.frame(
+  groupe_age = c("18-34 ans", "35-54 ans", "55 ans et +"),
+  appui_tresfavorable = c(18, 14, 16),
+  appui_favorable = c(37, 30, 21),
+  appui_defavorable = c(29, 26, 22),
+  appui_tresdefavorable = c(15, 30, 41)
+)
+
+# Calculer les totaux favorables et défavorables
+donneesCROP <- donneesCROP %>%
+  mutate(
+    total_favorable = appui_tresfavorable + appui_favorable,
+    total_defavorable = appui_defavorable + appui_tresdefavorable
+  )
+
+# Afficher le tableau CROP avec style
+knitr::kable(donneesCROP[, c("groupe_age", "total_favorable", "total_defavorable")],
+             col.names = c("Groupe d'âge", "Favorable (%)", "Défavorable (%)"),
+             caption = "Tableau 1 : Appui à l'indépendance par groupe d'âge (Sondage CROP, juillet-août 2025)",
+             align = 'c') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE,
+                position = "center") %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#0080d0") %>%
+  row_spec(1, background = "#e6f4ff")
+```
+
+```{r donnees-leger}
+# Données Léger (novembre 2025)
+donneesLEGER <- data.frame(
+  groupe_age = c("18-34 ans", "35-54 ans", "55 ans et +"),
+  appui_pour = c(38, 31, 36),
+  appui_contre = c(62, 69, 64)
+)
+
+# Afficher le tableau Léger avec style
+knitr::kable(donneesLEGER,
+             col.names = c("Groupe d'âge", "Pour (%)", "Contre (%)"),
+             caption = "Tableau 2 : Position sur l'indépendance par groupe d'âge (Sondage Léger, novembre 2025)",
+             align = 'c') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE,
+                position = "center") %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#0080d0") %>%
+  row_spec(2, background = "#e6f4ff")
+```
+
+## Visualisations
+
+### Figure 1 : Sondage Léger (approche binaire)
+
+```{r graphique-leger, fig.cap="**Figure 1** : Pourcentage d'appui à l'indépendance du Québec selon le groupe d'âge (Sondage Léger, novembre 2025). Les données montrent une opposition majoritaire dans tous les groupes, avec une variation de 7 points entre le plus jeune et le plus âgé groupe."}
+ggplot(donneesLEGER, aes(x = groupe_age, y = appui_pour)) +
+  geom_bar(stat = "identity", fill = "#0080d0", width = 0.65, alpha = 0.95) +
+  geom_text(aes(label = paste0(appui_pour, "%")), 
+            vjust = -0.7, size = 6.5, fontface = "bold", color = "#0c3c6e") +
+  labs(title = "Appui à l'indépendance du Québec selon l'âge",
+       subtitle = "Sondage Léger • Novembre 2025",
+       x = "",
+       y = "Pourcentage d'appui (%)") +
+  ylim(0, 85) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 20, color = "#0c3c6e", margin = margin(b = 5)),
+    plot.subtitle = element_text(hjust = 0.5, size = 14, color = "#718096", margin = margin(b = 20)),
+    axis.text.x = element_text(size = 13, face = "bold", color = "#1e5a8e"),
+    axis.text.y = element_text(size = 12, color = "#4a5568"),
+    axis.title.y = element_text(size = 14, face = "bold", margin = margin(r = 15), color = "#1e5a8e"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "#e2e8f0", size = 0.5),
+    plot.margin = margin(20, 20, 20, 20),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+```
+
+### Figure 2 : Sondage CROP (approche nuancée)
+
+```{r graphique-crop, fig.cap="**Figure 2** : Comparaison de l'appui favorable et défavorable à l'indépendance selon le groupe d'âge (Sondage CROP, juillet-août 2025). Les 18-34 ans sont le seul groupe où l'appui favorable dépasse l'opposition, avec un écart de 11 points."}
+# Préparer les données pour le graphique
+donnees_totaux <- donneesCROP %>%
+  select(groupe_age, total_favorable, total_defavorable) %>%
+  pivot_longer(cols = c(total_favorable, total_defavorable),
+               names_to = "categorie",
+               values_to = "pourcentage")
+
+donnees_totaux$categorie <- factor(donnees_totaux$categorie,
+                                   levels = c("total_favorable", "total_defavorable"),
+                                   labels = c("Favorable", "Défavorable"))
+
+# Créer le graphique
+ggplot(donnees_totaux, aes(x = groupe_age, y = pourcentage, fill = categorie)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7, alpha = 0.95) +
+  geom_text(aes(label = paste0(pourcentage, "%")), 
+            position = position_dodge(width = 0.7),
+            vjust = -0.7, size = 6, fontface = "bold", color = "#1a202c") +
+  scale_fill_manual(values = c("Favorable" = "#10b981", 
+                                "Défavorable" = "#ef4444")) +
+  labs(title = "Appui et opposition à l'indépendance selon l'âge",
+       subtitle = "Sondage CROP • Juillet-Août 2025",
+       x = "",
+       y = "Pourcentage (%)",
+       fill = "Position") +
+  ylim(0, 78) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 20, color = "#1a365d", margin = margin(b = 5)),
+    plot.subtitle = element_text(hjust = 0.5, size = 14, color = "#718096", margin = margin(b = 20)),
+    axis.text.x = element_text(size = 13, face = "bold", color = "#2d3748"),
+    axis.text.y = element_text(size = 12, color = "#4a5568"),
+    axis.title.y = element_text(size = 14, face = "bold", margin = margin(r = 15), color = "#2d3748"),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 13, color = "#2d3748"),
+    legend.text = element_text(size = 12, color = "#4a5568"),
+    legend.background = element_rect(fill = "white", color = "#cbd5e0", size = 0.5),
+    legend.margin = margin(t = 15),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "#e2e8f0", size = 0.5),
+    plot.margin = margin(20, 20, 20, 20),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+```
+
+### Figure 3 : Comparaison des deux sondages
+
+```{r graphique-comparaison, fig.cap="**Figure 3** : Comparaison directe de l'appui à l'indépendance entre les sondages CROP et Léger selon le groupe d'âge. Cette visualisation met en évidence les divergences méthodologiques entre les deux enquêtes, particulièrement marquées chez les 18-34 ans où l'écart atteint 17 points de pourcentage."}
+# Préparer les données pour la comparaison
+comparaison <- data.frame(
+  groupe_age = rep(c("18-34 ans", "35-54 ans", "55 ans et +"), 2),
+  sondage = rep(c("CROP", "Léger"), each = 3),
+  appui = c(donneesCROP$total_favorable, donneesLEGER$appui_pour)
+)
+
+# Créer un graphique de lignes avec points
+ggplot(comparaison, aes(x = groupe_age, y = appui, group = sondage, color = sondage)) +
+  geom_line(size = 2, alpha = 0.8) +
+  geom_point(size = 5, alpha = 0.9) +
+  geom_text(aes(label = paste0(appui, "%")), 
+            vjust = -1.2, size = 5.5, fontface = "bold", show.legend = FALSE) +
+  scale_color_manual(values = c("CROP" = "#0080d0", "Léger" = "#6c757d")) +
+  labs(title = "Comparaison CROP vs Léger : Appui à l'indépendance",
+       subtitle = "Deux méthodologies, deux portraits • 2025",
+       x = "",
+       y = "Pourcentage d'appui favorable (%)",
+       color = "Sondage") +
+  ylim(25, 70) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 20, color = "#0c3c6e", margin = margin(b = 5)),
+    plot.subtitle = element_text(hjust = 0.5, size = 14, color = "#718096", margin = margin(b = 20)),
+    axis.text.x = element_text(size = 13, face = "bold", color = "#1e5a8e"),
+    axis.text.y = element_text(size = 12, color = "#4a5568"),
+    axis.title.y = element_text(size = 14, face = "bold", margin = margin(r = 15), color = "#1e5a8e"),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 13, color = "#1e5a8e"),
+    legend.text = element_text(size = 12, color = "#4a5568"),
+    legend.background = element_rect(fill = "white", color = "#cbd5e0", size = 0.5),
+    legend.key = element_rect(fill = "white"),
+    legend.margin = margin(t = 15),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "#e2e8f0", size = 0.5),
+    plot.margin = margin(20, 20, 20, 20),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+```
+# Résultats principaux
+
+<div class="results-box">
+
+## Sondage CROP (juillet-août 2025)
+
+Les données du sondage CROP révèlent un renversement générationnel dans l'appui à l'indépendance du Québec, contredisant les tendances historiques. Chez les 18-34 ans, 55% se déclarent favorables contre 44% défavorables, faisant de ce groupe le seul où l'appui dépasse l'opposition. Cette tendance s'inverse progressivement avec l'âge : les 35-54 ans affichent 44% d'appui favorable contre 56% défavorable, tandis que les 55 ans et plus montrent un appui de seulement 37% contre 63% d'opposition.
+
+L'écart générationnel est particulièrement frappant : la différence entre le groupe le plus jeune et le plus âgé atteint 18 points de pourcentage, confirmant un clivage générationnel significatif, mais dans une direction inverse à celle documentée dans la littérature récente qui identifiait les baby-boomers comme les plus fervents défenseurs de l'indépendance.
+
+## Sondage Léger (novembre 2025)
+
+Le sondage Léger présente un portrait sensiblement différent avec une opposition majoritaire dans tous les groupes d'âge, suggérant une relative homogénéité générationnelle. Les 18-34 ans se positionnent à 38% pour contre 62% contre l'indépendance. Les 35-54 ans affichent le niveau d'appui le plus faible avec seulement 31% pour contre 69% contre, représentant un écart négatif de 38 points. Chez les 55 ans et plus, l'appui remonte légèrement à 36% pour contre 64% contre.
+
+Contrairement au sondage CROP, aucun groupe n'affiche une majorité favorable à l'indépendance. L'écart entre les jeunes adultes et les aînés est minimal (2 points seulement), ce qui contraste fortement avec les 18 points observés dans le sondage CROP. Cette divergence soulève des questions importantes sur l'influence de la méthodologie et de la formulation des questions sur les résultats obtenus.
+
+</div>
+
+# Discussion
+
+## Interprétation des résultats
+
+### Confirmation partielle de l'hypothèse
+
+Les données collectées ne confirment pas entièrement l'hypothèse initiale selon laquelle les jeunes adultes affichent un appui plus élevé que les aînés. Le sondage CROP confirme effectivement cette hypothèse avec un écart de 18 points entre les 18-34 ans et les 55 ans et plus, suggérant un renouveau générationnel du mouvement souverainiste. Cependant, le sondage Léger infirme cette tendance en montrant un écart minimal de seulement 2 points entre ces mêmes groupes, avec une opposition majoritaire dans toutes les tranches d'âge.
+
+Cette incohérence entre sources met en garde contre les conclusions hâtives basées sur un seul sondage comme l'ont fait plusieurs articles de presse cet été qui ont proclamé un regain souverainiste chez les jeunes. D'autant plus, un sondage ultérieur a infirmé la tendance du sondage CROP, mettant en évidence la nature transitoire et possiblement conjoncturelle du supposé renouveau souverainiste des jeunes Québécois de l'été 2025. Cette volatilité rappelle l'importance de la prudence dans l'interprétation des données d'opinion publique.
+
+## Choix des outils et philosophie de recherche
+
+### Critères de sélection des outils
+
+Les outils utilisés dans ce projet ont été sélectionnés selon plusieurs principes fondamentaux de la recherche reproductible et accessible. Pour la revue de littérature, Elicit a permis d'identifier rapidement les articles scientifiques pertinents sur l'appui générationnel à la souveraineté québécoise. Les données primaires proviennent des sites web publics de CROP et Léger, garantissant un accès gratuit et transparent aux résultats de sondage. L'analyse statistique et la visualisation ont été réalisées avec R et RStudio, en utilisant principalement trois packages : ggplot2 pour créer des visualisations sophistiquées, dplyr pour manipuler efficacement les données, et tidyr pour restructurer les tableaux selon les besoins analytiques.
+
+Le premier critère de sélection était l'accessibilité. À l'exception d'Elicit, tous les outils utilisés sont gratuits et accessibles sans abonnement institutionnel, démocratisant ainsi l'accès à la recherche de qualité. Le deuxième critère portait sur la transparence et la réplicabilité. Tous les éléments de l'analyse sont documentés de manière exhaustive : les sources exactes des données avec leurs dates de collecte, le code R complet et commenté accessible via le bouton "Code", ainsi que toutes les transformations et calculs effectués sur les données brutes.
+
+Le troisième critère concernait l'utilisation d'outils d'analyse open-source. R et ses packages ont été privilégiés car ils représentent des standards largement reconnus en science politique, utilisés par la communauté académique internationale. Ces outils offrent une flexibilité remarquable, permettant des analyses statistiques complexes et des visualisations hautement personnalisables. La reproductibilité est garantie puisque le code peut être exécuté par n'importe qui disposant de R, un logiciel gratuit et accessible. Enfin, la nature open-source de ces outils garantit leur pérennité et leur accessibilité à long terme, indépendamment des fluctuations commerciales ou institutionnelles.
+
+### Philosophie de la recherche ouverte
+
+Ce projet s'inscrit dans une philosophie de science ouverte visant à transformer les pratiques académiques traditionnelles. L'objectif premier est de maximiser la transparence des méthodes employées, permettant à quiconque de comprendre exactement comment les résultats ont été obtenus. Cette transparence facilite la vérification indépendante par d'autres chercheurs ou citoyens intéressés, renforçant ainsi la crédibilité et la robustesse des conclusions. La démarche encourage également la collaboration et l'amélioration continue en permettant à d'autres de reprendre, critiquer ou enrichir le travail présenté. Finalement, cette approche vise à rendre la recherche accessible au-delà des murs académiques, contribuant à un débat public mieux informé sur des questions sociopolitiques cruciales comme l'avenir constitutionnel du Québec.
+
+# Conclusion
+
+Cette étude apporte un éclairage nuancé sur les variations générationnelles dans l'appui à l'indépendance du Québec. Les résultats suggèrent que les dynamiques générationnelles sont complexes et sensibles à la méthodologie utilisée. Le sondage CROP indique un possible renouveau de l'intérêt souverainiste chez les jeunes, tandis que le sondage Léger suggère une opposition relativement homogène à travers les âges. La seule constante observable dans les deux enquêtes concerne les 35-54 ans qui affichent systématiquement le niveau d'appui le plus faible, suggérant peut-être un effet de cycle de vie où les responsabilités familiales et professionnelles modulent les priorités politiques.
+
+Ces résultats soulignent l'importance cruciale de la prudence méthodologique et de la triangulation des sources dans l'étude de l'opinion publique. Une seule enquête, quelle que soit sa qualité, ne peut capturer la complexité des attitudes politiques sur un enjeu aussi fondamental que l'indépendance nationale. Les divergences observées entre CROP et Léger illustrent comment la formulation des questions, le moment de collecte et d'autres facteurs méthodologiques peuvent influencer substantiellement les résultats. Ces constats invitent à poursuivre la recherche avec des approches longitudinales permettant de suivre l'évolution des attitudes au fil du temps, et des analyses multivariées intégrant d'autres variables explicatives comme la langue, la région, le niveau d'éducation et l'identité nationale pour mieux comprendre l'évolution du mouvement souverainiste québécois dans toute sa complexité.
+
+# Références
+
+Bélanger, É., & Mahéo, V.-A. (2020). Le Parti québécois dans le nouveau système multipartite : Évolution des appuis générationnels au PQ de 2007 à 2018. *Politique et Sociétés*, *39*(3), 19‑55. https://doi.org/10.7202/1072084ar
+
+Bélanger, É., & Perrella, A. M. L. (2009). Facteurs d'appui à la souveraineté du Québec chez les jeunes : Une comparaison entre francophones, anglophones et allophones. *Politique et Sociétés*, *27*(3), 13‑40. https://doi.org/10.7202/029846ar
+
+Mahéo, V.-A., & Bélanger, É. (2024). Les courants nationalistes à l'épreuve des générations : Analyses des attitudes et choix de vote des Québécois.es de 2007 à 2022. *Canadian Journal of Political Science*, *57*(2), 364‑386. https://doi.org/10.1017/S0008423924000106
+
+---
+
+<div style="text-align: center; margin-top: 40px; padding: 25px; background: linear-gradient(135deg, #0080d0 0%, #004d99 100%); border-radius: 12px; color: white; font-weight: 600;">
+**Document généré avec R Markdown • 2025**
+</div>
