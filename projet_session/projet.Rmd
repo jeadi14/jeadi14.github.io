@@ -259,7 +259,7 @@ L'étude de Bélanger et coll. (2008) offre un contraste intéressant en analysa
 
 Plus récemment, Bélanger et coll. (2020) ont analysé l'évolution des écarts générationnels en ce qui concerne le vote pour le Parti québécois (PQ) de 2007 à 2018. Ils ont constaté que les personnes nées vers 1950, c'est-à-dire les baby-boomers, se distinguent par leur appui très élevé à la souveraineté.
 
-Ces articles montrent un changement important dans le paysage générationnel souverainiste. Auparavant, les jeunes étaient les principaux instigateurs de ce mouvement. Aujourd'hui, ce sont les baby-boomers qui manifestent le soutien le plus constant. Cette transformation est attribuable au principe de l'« effet de génération » : les personnes nées pendant la Révolution tranquille et ayant été politisées durant les débats référendaires ont conservé leur engagement envers le projet souverainiste à mesure qu'elles vieillissaient, tandis que les générations suivantes, élevées dans un contexte politique distinct, ont développé des points de vue distincts.
+Ces articles montrent un changement important dans le paysage générationnel souverainiste. Auparavant, les jeunes étaient les principaux instigateurs de ce mouvement. Aujourd'hui, ce sont les baby-boomers qui manifestent le soutien le plus constant. Cette transformation est attribuable au principe de l'« effet de génération » : les personnes nées pendant la Révolution tranquille et ayant été politisées durant les débats référendaires ont conservé leur engagement envers le projet souverainiste à mesure qu'elles vieillissaient, tandis que les générations suivantes, élevées dans un contexte politique différent, ont développé des points de vue distincts.
 
 # Méthodologie
 
@@ -272,7 +272,7 @@ Pour cette analyse, deux sondages d'opinion publique récents ont été utilisé
 - **Échelle de mesure** : Opinion sur une échelle à quatre points (très favorable, favorable, défavorable, très défavorable)
 - **Source** : Résultat disponible sur le site web suivant : Fournier, P. (2025). Êtes-vous favorable à la souveraineté du Québec ? https://www.qc125.ca/p/etes-vous-favorable-a-la-souverainete 
 
-**2. Sondage Léger (novembre 2025)**
+**2. Sondage Léger (octobre 2025)**
 
 - **Échelle de mesure** : Question binaire (pour/contre l'indépendance)
 - **Source** : Rapport public accessible sur le site web de Léger Marketing : Léger. (2025, 21 octobre). Trente ans après le référendum de 1995 : où en est l'appui à la souveraineté du Québec ? https://leger360.com/fr/trente-ans-apres-le-referendum-souverainete-du-quebec/
@@ -313,7 +313,7 @@ knitr::kable(donneesCROP[, c("groupe_age", "total_favorable", "total_defavorable
 ```
 
 ```{r donnees-leger}
-# Données Léger (novembre 2025)
+# Données Léger (octobre 2025)
 donneesLEGER <- data.frame(
   groupe_age = c("18-34 ans", "35-54 ans", "55 ans et +"),
   appui_pour = c(38, 31, 36),
@@ -323,7 +323,7 @@ donneesLEGER <- data.frame(
 # Afficher le tableau Léger avec style
 knitr::kable(donneesLEGER,
              col.names = c("Groupe d'âge", "Pour (%)", "Contre (%)"),
-             caption = "Tableau 2 : Position sur l'indépendance par groupe d'âge (Sondage Léger, novembre 2025)",
+             caption = "Tableau 2 : Position sur l'indépendance par groupe d'âge (Sondage Léger, octobre 2025)",
              align = 'c') %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
                 full_width = FALSE,
@@ -334,15 +334,15 @@ knitr::kable(donneesLEGER,
 
 ## Visualisations
 
-### Figure 1 : Sondage Léger (approche binaire)
+### Figure 1 : Sondage Léger 
 
-```{r graphique-leger, fig.cap="**Figure 1** : Pourcentage d'appui à l'indépendance du Québec selon le groupe d'âge (Sondage Léger, novembre 2025). Les données montrent une opposition majoritaire dans tous les groupes, avec une variation de 7 points entre le plus jeune et le plus âgé groupe."}
+```{r graphique-leger, fig.cap="**Figure 1** : Pourcentage d'appui à l'indépendance du Québec selon le groupe d'âge (Sondage Léger, octobre 2025). Les données montrent une opposition majoritaire dans tous les groupes, avec une variation de 7 points entre le plus jeune et le plus âgé groupe."}
 ggplot(donneesLEGER, aes(x = groupe_age, y = appui_pour)) +
   geom_bar(stat = "identity", fill = "#0080d0", width = 0.65, alpha = 0.95) +
   geom_text(aes(label = paste0(appui_pour, "%")), 
             vjust = -0.7, size = 6.5, fontface = "bold", color = "#0c3c6e") +
   labs(title = "Appui à l'indépendance du Québec selon l'âge",
-       subtitle = "Sondage Léger • Novembre 2025",
+       subtitle = "Sondage Léger • Octobre 2025",
        x = "",
        y = "Pourcentage d'appui (%)") +
   ylim(0, 85) +
@@ -362,7 +362,7 @@ ggplot(donneesLEGER, aes(x = groupe_age, y = appui_pour)) +
   )
 ```
 
-### Figure 2 : Sondage CROP (approche nuancée)
+### Figure 2 : Sondage CROP 
 
 ```{r graphique-crop, fig.cap="**Figure 2** : Comparaison de l'appui favorable et défavorable à l'indépendance selon le groupe d'âge (Sondage CROP, juillet-août 2025). Les 18-34 ans sont le seul groupe où l'appui favorable dépasse l'opposition, avec un écart de 11 points."}
 # Préparer les données pour le graphique
@@ -465,11 +465,11 @@ Les données du sondage CROP révèlent un renversement générationnel dans l'a
 
 L'écart générationnel est particulièrement frappant : la différence entre le groupe le plus jeune et le plus âgé atteint 18 points de pourcentage, confirmant un clivage générationnel significatif, mais dans une direction inverse à celle documentée dans la littérature récente qui identifiait les baby-boomers comme les plus fervents défenseurs de l'indépendance.
 
-## Sondage Léger (novembre 2025)
+## Sondage Léger (octobre 2025)
 
 Le sondage Léger présente un portrait sensiblement différent avec une opposition majoritaire dans tous les groupes d'âge, suggérant une relative homogénéité générationnelle. Les 18-34 ans se positionnent à 38% pour contre 62% contre l'indépendance. Les 35-54 ans affichent le niveau d'appui le plus faible avec seulement 31% pour contre 69% contre, représentant un écart négatif de 38 points. Chez les 55 ans et plus, l'appui remonte légèrement à 36% pour contre 64% contre.
 
-Contrairement au sondage CROP, aucun groupe n'affiche une majorité favorable à l'indépendance. L'écart entre les jeunes adultes et les aînés est minimal (2 points seulement), ce qui contraste fortement avec les 18 points observés dans le sondage CROP. Cette divergence soulève des questions importantes sur l'influence de la méthodologie et de la formulation des questions sur les résultats obtenus.
+Contrairement au sondage CROP, aucun groupe n'affiche une majorité favorable à l'indépendance. L'écart entre les jeunes adultes et les aînés est minimal, ce qui contraste fortement avec les 18 points observés dans le sondage CROP. Cette divergence soulève des questions importantes sur l'influence de la méthodologie et de la formulation des questions sur les résultats obtenus.
 
 </div>
 
@@ -479,7 +479,7 @@ Contrairement au sondage CROP, aucun groupe n'affiche une majorité favorable à
 
 ### Confirmation partielle de l'hypothèse
 
-Les données collectées ne confirment pas entièrement l'hypothèse initiale selon laquelle les jeunes adultes affichent un appui plus élevé que les aînés. Le sondage CROP confirme effectivement cette hypothèse avec un écart de 18 points entre les 18-34 ans et les 55 ans et plus, suggérant un renouveau générationnel du mouvement souverainiste. Cependant, le sondage Léger infirme cette tendance en montrant un écart minimal de seulement 2 points entre ces mêmes groupes, avec une opposition majoritaire dans toutes les tranches d'âge.
+Les données collectées ne confirment pas entièrement l'hypothèse initiale selon laquelle les jeunes adultes affichent un appui plus élevé que les aînés. Le sondage CROP confirme effectivement cette hypothèse avec un écart de 18 points entre les 18-34 ans et les 55 ans et plus, suggérant un renouveau générationnel du mouvement souverainiste. Cependant, le sondage Léger infirme cette tendance, avec une opposition majoritaire dans toutes les tranches d'âge.
 
 Cette incohérence entre sources met en garde contre les conclusions hâtives basées sur un seul sondage comme l'ont fait plusieurs articles de presse cet été qui ont proclamé un regain souverainiste chez les jeunes. D'autant plus, un sondage ultérieur a infirmé la tendance du sondage CROP, mettant en évidence la nature transitoire et possiblement conjoncturelle du supposé renouveau souverainiste des jeunes Québécois de l'été 2025. Cette volatilité rappelle l'importance de la prudence dans l'interprétation des données d'opinion publique.
 
@@ -487,7 +487,7 @@ Cette incohérence entre sources met en garde contre les conclusions hâtives ba
 
 ### Critères de sélection des outils
 
-Les outils utilisés dans ce projet ont été sélectionnés selon plusieurs principes fondamentaux de la recherche reproductible et accessible. Pour la revue de littérature, Elicit a permis d'identifier rapidement les articles scientifiques pertinents sur l'appui générationnel à la souveraineté québécoise. Les données primaires proviennent des sites web publics de CROP et Léger, garantissant un accès gratuit et transparent aux résultats de sondage. L'analyse statistique et la visualisation ont été réalisées avec R et RStudio, en utilisant principalement trois packages : ggplot2 pour créer des visualisations sophistiquées, dplyr pour manipuler efficacement les données, et tidyr pour restructurer les tableaux selon les besoins analytiques.
+Les outils utilisés dans ce projet ont été sélectionnés selon plusieurs principes fondamentaux de la recherche reproductible et accessible. Pour la revue de littérature, Elicit a permis d'identifier rapidement les articles scientifiques pertinents sur l'appui générationnel à la souveraineté québécoise. Les données primaires proviennent des sites web publics de CROP et Léger, garantissant un accès gratuit et transparent aux résultats de sondage. L'analyse statistique et la visualisation ont été réalisées avec R et RStudio, en utilisant principalement trois packages : ggplot2 pour créer des visualisations sophistiquées, dplyr pour manipuler efficacement les données, et tidyr pour restructurer les tableaux selon les besoins analytiques. Zotero a été utilisé pour mes références bibliographiques.
 
 Le premier critère de sélection était l'accessibilité. À l'exception d'Elicit, tous les outils utilisés sont gratuits et accessibles sans abonnement institutionnel, démocratisant ainsi l'accès à la recherche de qualité. Le deuxième critère portait sur la transparence et la réplicabilité. Tous les éléments de l'analyse sont documentés de manière exhaustive : les sources exactes des données avec leurs dates de collecte, le code R complet et commenté accessible via le bouton "Code", ainsi que toutes les transformations et calculs effectués sur les données brutes.
 
@@ -495,7 +495,7 @@ Le troisième critère concernait l'utilisation d'outils d'analyse open-source. 
 
 ### Philosophie de la recherche ouverte
 
-Ce projet s'inscrit dans une philosophie de science ouverte visant à transformer les pratiques académiques traditionnelles. L'objectif premier est de maximiser la transparence des méthodes employées, permettant à quiconque de comprendre exactement comment les résultats ont été obtenus. Cette transparence facilite la vérification indépendante par d'autres chercheurs ou citoyens intéressés, renforçant ainsi la crédibilité et la robustesse des conclusions. La démarche encourage également la collaboration et l'amélioration continue en permettant à d'autres de reprendre, critiquer ou enrichir le travail présenté. Finalement, cette approche vise à rendre la recherche accessible au-delà des murs académiques, contribuant à un débat public mieux informé sur des questions sociopolitiques cruciales comme l'avenir constitutionnel du Québec.
+Ce projet s'inscrit dans une philosophie de science ouverte visant à transformer les pratiques académiques traditionnelles. L'objectif premier est de maximiser la transparence des méthodes employées, permettant à quiconque de comprendre exactement comment les résultats ont été obtenus. Cette transparence facilite la vérification indépendante par d'autres chercheurs ou citoyens intéressés, renforçant ainsi la crédibilité et la robustesse des conclusions. La démarche encourage également la collaboration et l'amélioration continue en permettant à d'autres de reprendre, critiquer ou enrichir le travail présenté. Finalement, cette approche vise à rendre la recherche accessible au-delà des murs académiques, contribuant à un débat public mieux informé sur des questions sociopolitiques cruciales.
 
 # Conclusion
 
